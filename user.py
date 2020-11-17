@@ -37,4 +37,9 @@ class User:
         '''
         for user in cls.user_list:
             if user.user_name == username:
-                return user    
+                return user
+    @classmethod
+    def find_by_userpassword(cls,userpassword):
+        for password in cls.user_list:
+            if password.password == userpassword:
+                return password    
