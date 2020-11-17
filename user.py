@@ -42,4 +42,9 @@ class User:
     def find_by_userpassword(cls,userpassword):
         for password in cls.user_list:
             if password.password == userpassword:
-                return password    
+                return password
+    @classmethod
+    def display_userInfo(cls):
+        return cls.user_list
+class Account:
+    account_list = []    
